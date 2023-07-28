@@ -1,0 +1,12 @@
+FROM releases-docker.jfrog.io/jfrog/artifactory-pro:7.63.7
+
+USER root
+
+
+
+RUN cd /tmp && curl -o apk-tools.apk http://dl-cdn.alpinelinux.org/alpine/latest-stable/main/aarch64/apk-tools-static-2.14.0-r2.apk && \
+    tar -xzvf apk-tools.apk && \
+    cd sbin && \
+    ./apk.static -X http://dl-cdn.alpinelinux.org/alpine/latest-stable/main -U --allow-untrusted --initdb add rsync && \
+    ./apk.static -X http://dl-cdn.alpinelinux.org/alpine/latest-stable/main -U --allow-untrusted --initdb add less
+RUN { crontab -l -u artifactory; echo '55 * * * * /home/artiftst/app/current/artifactory/app/third-party/logrotate/logrotate /home/artiftst/app/current/artifactory/var/etc/logrotate/logrotate.conf --state /home/artiftst/app/current/artifactory/var/etc/logrotate/logrotate-state'; } | crontab -u artifactory -
