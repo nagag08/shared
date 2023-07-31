@@ -1,12 +1,15 @@
-FROM releases-docker.jfrog.io/jfrog/artifactory-pro:7.63.7
-
-USER root
-
-
-
-RUN cd /tmp && curl -o apk-tools.apk http://dl-cdn.alpinelinux.org/alpine/latest-stable/main/aarch64/apk-tools-static-2.14.0-r2.apk && \
-    tar -xzvf apk-tools.apk && \
-    cd sbin && \
-    ./apk.static -X http://dl-cdn.alpinelinux.org/alpine/latest-stable/main -U --allow-untrusted --initdb add rsync && \
-    ./apk.static -X http://dl-cdn.alpinelinux.org/alpine/latest-stable/main -U --allow-untrusted --initdb add less
-RUN { crontab -l -u artifactory; echo '55 * * * * /home/artiftst/app/current/artifactory/app/third-party/logrotate/logrotate /home/artiftst/app/current/artifactory/var/etc/logrotate/logrotate.conf --state /home/artiftst/app/current/artifactory/var/etc/logrotate/logrotate-state'; } | crontab -u artifactory -
+releases-docker.jfrog.io/bitnami/rabbitmq
+releases-docker.jfrog.io/bitnami/redis
+releases-docker.jfrog.io/jfrog/artifactory-pro
+releases-docker.jfrog.io/jfrog/distribution-distribution
+releases-docker.jfrog.io/jfrog/elasticsearch-sg
+releases-docker.jfrog.io/jfrog/insight-scheduler
+releases-docker.jfrog.io/jfrog/insight-server
+releases-docker.jfrog.io/jfrog/nginx-artifactory-pro
+releases-docker.jfrog.io/jfrog/observability
+releases-docker.jfrog.io/jfrog/router
+releases-docker.jfrog.io/jfrog/xray-analysis
+releases-docker.jfrog.io/jfrog/xray-indexer
+releases-docker.jfrog.io/jfrog/xray-persist
+releases-docker.jfrog.io/jfrog/xray-server
+releases-docker.jfrog.io/ubi9/ubi-minimal
