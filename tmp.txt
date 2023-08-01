@@ -1,15 +1,7 @@
-releases-docker.jfrog.io/bitnami/rabbitmq
-releases-docker.jfrog.io/bitnami/redis
-releases-docker.jfrog.io/jfrog/artifactory-pro
-releases-docker.jfrog.io/jfrog/distribution-distribution
-releases-docker.jfrog.io/jfrog/elasticsearch-sg
-releases-docker.jfrog.io/jfrog/insight-scheduler
-releases-docker.jfrog.io/jfrog/insight-server
-releases-docker.jfrog.io/jfrog/nginx-artifactory-pro
-releases-docker.jfrog.io/jfrog/observability
-releases-docker.jfrog.io/jfrog/router
-releases-docker.jfrog.io/jfrog/xray-analysis
-releases-docker.jfrog.io/jfrog/xray-indexer
-releases-docker.jfrog.io/jfrog/xray-persist
-releases-docker.jfrog.io/jfrog/xray-server
-releases-docker.jfrog.io/ubi9/ubi-minimal
+masterKey: 8345655f6d17838481ecf425e69bbe8d19d2e051813508081c5475592899faa6
+  # masterKeySecretName: my-masterkey-secret
+  ## Join Key to connect to other services to Artifactory.
+  ## IMPORTANT: Setting this value overrides the existing joinKey
+  ## IMPORTANT: You should NOT use the example joinKey for a production deployment!
+  # joinKey: EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+  joinKey: 98c6f14c1193534a338ac041f079975c
