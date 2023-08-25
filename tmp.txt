@@ -1,7 +1,0 @@
-masterKey: 8345655f6d17838481ecf425e69bbe8d19d2e051813508081c5475592899faa6
-  # masterKeySecretName: my-masterkey-secret
-  ## Join Key to connect to other services to Artifactory.
-  ## IMPORTANT: Setting this value overrides the existing joinKey
-  ## IMPORTANT: You should NOT use the example joinKey for a production deployment!
-  # joinKey: EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-  joinKey: 98c6f14c1193534a338ac041f079975c
