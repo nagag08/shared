@@ -1,0 +1,8 @@
+items.find(
+    {
+        "repo":{"$eq":"myconan"},
+        "name":{"$eq":".timestamp"},
+        "modified" : {"$last" : "7d"},
+        "path": {"$match" : "*/package/*"}
+    }
+).include("path")
