@@ -8,7 +8,7 @@
 
 ### How to run 
 ```
-bash conanremote.sh
+bash conanremote_cleanup_uploadtime.sh
 ```
 ### check if all packages are removed.
 ```
