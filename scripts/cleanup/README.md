@@ -1,4 +1,4 @@
-# Under development
+# Under development - Procedure is not approved yet
 
 ## Clean up of Conan artifactory remote repository 
 
