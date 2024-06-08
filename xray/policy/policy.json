@@ -1,0 +1,22 @@
+{
+  "name": "DEVELOPER-BAE",
+  "type": "security",
+  "description": "to be used for IDE integration",
+  "rules": [
+    {
+      "name": "to_fix",
+      "priority": 1,
+      "actions": {
+        "block_download": {
+          "unscanned": false,
+          "active": false
+        }
+      },
+      "criteria": {
+        "fix_version_dependant": true,
+        "malicious_package": false,
+        "min_severity": "High"
+      }
+    }
+  ]
+}
