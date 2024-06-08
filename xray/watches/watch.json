@@ -1,0 +1,30 @@
+{
+    "general_data": {
+        "name": "watch-1",
+        "description": "This is a new watch created using API V2",
+        "active": true
+    },
+    "project_resources": {
+        "resources": [
+            {
+                "type": "repository",
+                "bin_mgr_id": "art-prod-eu",
+                "name": "libs-release-local",
+                "filters": [
+                    {
+                        "type": "regex",
+                        "value": ".*"
+                    }
+                ]
+            }
+        ]
+    },
+    "assigned_policies": [
+        {
+            "name": "medium_policy",
+            "type": "security"
+        }
+    ]
+   },  
+    "watch_recipients":["galba@myemail.com","umac@youremail.com"]
+}
